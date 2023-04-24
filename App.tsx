@@ -1,6 +1,10 @@
 import * as React from 'react';
+import MSF from './MSF';
 
-export default function App() {
+export default function App() {{
+  const {steps,currentStepIndex}=MSF([
+    <div>one</div>,
+    <div>two</div>]) }
   return (
     <div style={{position:"relative", background:"white",
     border: "solid 1px black",
@@ -8,10 +12,11 @@ export default function App() {
     fontFamily:"Arial"   }}>
       <form action="">
         <div style={{position:"absolute"
-      ,top:".5rem", right:".5rem"}}>  0/2
+      ,top:".5rem", right:".5rem"}}> {currentStepIndex+1}/{steps.length}
 
         </div>
+        {step}
       </form>
     </div>
   );
-}
+ }
